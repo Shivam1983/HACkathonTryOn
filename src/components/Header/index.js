@@ -2,7 +2,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Headers = styled.header`
   display: flex;
@@ -238,35 +239,42 @@ const Header = () => {
         <h2>TryOn</h2>
       </Logo>
       <Nav>
-        <a href="#home" onClick={(e) => scrollUp("home", e)}>
-          Home
-        </a>
+        {/* <Button>
+          <Link to="/">Home</Link>
+        </Button> */}
+        <Link to="/"> Home </Link>
         <a href="#about" onClick={(e) => scrollUp("about", e)}>
           About Us
         </a>
-        <a href="#library" onClick={(e) => scrollUp("library", e)}>
+        <a href="#Library" onClick={(e) => scrollUp("Library", e)}>
           Library
         </a>
         <a href="#contact" onClick={(e) => scrollUp("contact", e)}>
           <Button>Contact Us</Button>
         </a>
+        <Button>
+          <Link to="/login">Login</Link>
+        </Button>
       </Nav>
       <HamburgerBtn clicked={+click} onClick={() => setClick(!click)}>
         <span></span>
       </HamburgerBtn>
       <MobileMenu clicked={+click}>
-        <a href="#home" onClick={(e) => handleClick("home", e)}>
-          Home
-        </a>
+        <Link to="/">
+          <button>Home </button>{" "}
+        </Link>
         <a href="#about" onClick={(e) => handleClick("about", e)}>
           About Us
         </a>
-        <a href="#library" onClick={(e) => handleClick("library", e)}>
+        <a href="#services" onClick={(e) => handleClick("services", e)}>
           Library
         </a>
         <a href="#contact" onClick={(e) => handleClick("contact", e)}>
           <Button>Contact Us</Button>
         </a>
+        <Link to="/login">
+          <Button>Login</Button>
+        </Link>
       </MobileMenu>
     </Headers>
   );

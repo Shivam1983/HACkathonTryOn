@@ -7,6 +7,7 @@ const FOOTER = styled.footer`
   padding: 1.2rem calc(2.5rem + 2.5vw);
   font-size: 1rem;
   display: flex;
+  height:6rem;
   align-items: center;
   justify-content: space-between;
   @media only Screen and (max-width: 48em) {
@@ -47,22 +48,22 @@ const Footer = () => {
   return (
     <FOOTER>
       <LeftText>
-        © 2021 Built and Design by{" "}
-        <a href="https://www.youtube.com/channel/UCeYt6blRBKuNrEg_-282fSA">
-          @CodeBucks
+       
+        <a href="#">
+          
         </a>
       </LeftText>
       <RightText>
-        Reach out to me via 😉
-        <a href="https://twitter.com/code_bucks">
+        
+        <a href="#">
           <img src={Twitter} alt="Twitter" />
         </a>
         &nbsp;
-        <a href="https://www.instagram.com/code.bucks/">
+        <a href="#">
           <img src={Instagram} alt="Instagram" />
         </a>
         &nbsp;
-        <a href="mailto:codebucks27@gmail.com?subject=Email From Your Website">
+        <a href="#">
           <img src={Gmail} alt="Gmail" />
         </a>
       </RightText>
@@ -72,4 +73,4 @@ const Footer = () => {
 
 export default Footer;
 
-//© 2021 by CodeBucks. Design by @CodeBucks.
+
